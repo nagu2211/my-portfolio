@@ -25,8 +25,7 @@ export default {
       },
       backgroundImage: {
         site: "url('./assets/aver.jpg')",
-        about: "url('./assets/about.jpg')",
-        services: "url('./assets/services.png')",
+        about: "url('./assets/about.png')",
       },
     },
   },

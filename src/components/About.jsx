@@ -37,16 +37,25 @@ const About = () => {
               I'm Frontend Developer & Full Stack Student from Argentina
             </h3>
             <p className="mb-6">
-              all my life I have sought my passion and found it... is to
-              program, create, imagine and make it a reality! , about 2 years
-              ago I come studying everything related to this world, I have
-              certificates in 'web development', 'javascript', 'react',
-              'algorithms and data structures' 'backend developer', With ambition and a fast
-              learning pace, a proactive team player. Opting for me
-              ensures no regrets,i dedicate my entire effort to every task.
+              Passionate about programming, creating, and imagining, with a
+              dedicated two-year study in the field. Quick learner and proactive
+              team player.
             </p>
+            <h5>Work Experience:</h5>
+            <ul className="list-disc">
+              <li>+2 years in 2020. Retail and wholesale sales.</li>
+              <li>
+                0.5 years to date. Translation of courses and books for English
+                teachers into Spanish.
+              </li>
+              <li>
+                1 year to date. Managing a local store specializing in fresh and
+                food products.
+              </li>
+            </ul>
+
             {/* stats */}
-            <div className="flex gap-x-6 lg:gap-x-10 mb-12">
+            <div className="flex gap-x-6 lg:gap-x-10 mb-12 pt-5">
               <div>
                 <div className="text-[40px] font-tertiary text-gradient mb-2">
                   B{inView ? <CountUp start={0} end={2} duration={4} /> : null}

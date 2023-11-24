@@ -80,9 +80,12 @@ const Banner = () => {
               <Link to="contact" smooth={true} spy={true} isDynamic={true}>
                 <button className="btn btn-lg">Contact me</button>
               </Link>
-              <a href="#" className="text-gradient btn-link">
-                My Portfolio
-              </a>
+              <Link to="about" smooth={true} spy={true} isDynamic={true}>
+              <button className="text-gradient btn-link">
+                Me
+              </button>
+              </Link>
+              
             </motion.div>
             <motion.div
               variants={fadeIn("up", 0.7)}

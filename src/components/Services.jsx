@@ -7,6 +7,7 @@ import csspre from '../assets/frame2.png'
 import jslib from '../assets/frame3.png'
 import design from '../assets/frame4.png'
 import aditional from '../assets/frame5.png'
+import { Link } from "react-scroll";
 
 const services = [
   {
@@ -52,14 +53,17 @@ const Services = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 lg:bg-services lg:bg-bottom bg-no-repeat
-          mb-12 lg:mb-0"
+            className="flex-1 lg:bg-bottom bg-no-repeat bg-cover
+          mb-12 lg:mb-0 p-2"
           >
             <h2 className="h2 text-accent mb-6">My knowledge</h2>
             <h3 className="h3 max-w-[455px] mb-16">
             I am a front-end developer with additional back-end knowledge
             </h3>
+            <Link to="work" smooth={true} spy={true} isDynamic={true}>
+                
             <button className="btn btn-sm">See my work</button>
+              </Link>
           </motion.div>
           {/* services */}
           <motion.div 
