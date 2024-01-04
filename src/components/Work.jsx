@@ -23,7 +23,7 @@ const Work = () => {
             {/* text */}
             <div>
               <h2 className="h2 leading-tight text-accent">My Latest Work.</h2>
-              <p className="max-w-sm mb-14">
+              <p className="max-w-sm mb-14 text-black dark:text-white">
               I show you my latest academic projects and personal designs, hoping that we can work together!
               </p>
               <button className="btn btn-sm">View all projects</button>

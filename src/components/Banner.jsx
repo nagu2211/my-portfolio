@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect,useState,useRef} from "react";
 //images
 import image from "../assets/avatar.png";
 //icons
@@ -14,7 +14,28 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../Variants";
 import { Link } from "react-scroll";
 
+
 const Banner = () => {
+  const [color, setColor] = useState("white");
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const htmlElement = document.querySelector('html');
+
+    const handleClassChange = () => {
+      setIsDarkMode(htmlElement.classList.contains('dark'));
+    };
+
+    htmlElement.addEventListener('click', handleClassChange);
+
+    return () => {
+      htmlElement.removeEventListener('click', handleClassChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    setColor(isDarkMode ? "white" : "black");
+  }, [isDarkMode]);
   return (
     <section
       className="min-h-[85vh] lg:min-h-[78vh] flex items-center"
@@ -31,7 +52,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="text-[55px] font-bold leading-[0.8] lg:text-[60px]"
+              className="text-[55px] font-bold leading-[0.8] lg:text-[60px] text-black dark:text-white"
             >
               SANTIAGO <span>ESPINDOLA</span>
             </motion.h1>
@@ -43,7 +64,7 @@ const Banner = () => {
               className="mb-6 text-[36px] lg:text-[37px] font-secondary
               font-semibold uppercase leading-[1]"
             >
-              <span className="text-white mr-4">I am a</span>
+              <span className="text-black dark:text-white mr-4">I am a</span>
               <TypeAnimation
                 sequence={[
                   "Frontend Dev",
@@ -64,7 +85,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-8 max-w-lg mx-auto lg:mx-0"
+              className="mb-8 max-w-lg mx-auto lg:mx-0 text-black dark:text-white"
             >
               Hi! Thanks for coming here, make yourself comfortable and I'll
               show you who I am and how I got here.
@@ -78,7 +99,7 @@ const Banner = () => {
               mx-auto justify-center lg:mx-0 lg:justify-start "
             >
               <Link to="contact" smooth={true} spy={true} isDynamic={true}>
-                <button className="btn btn-lg">Contact me</button>
+                <button className="btn btn-lg ">Contact me</button>
               </Link>
               <Link to="about" smooth={true} spy={true} isDynamic={true}>
               <button className="text-gradient btn-link">
@@ -99,21 +120,21 @@ const Banner = () => {
                 <UseAnimations
                   animation={instagram}
                   size={40}
-                  strokeColor="white"
+                  strokeColor={color}
                 />
               </a>
               <a href="https://github.com/nagu2211">
                 <UseAnimations
                   animation={github}
                   size={40}
-                  strokeColor="white"
+                  strokeColor={color}
                 />
               </a>
               <a href="https://www.linkedin.com/in/santiago-espindola-a56ba4255/">
                 <UseAnimations
                   animation={linkedin}
                   size={40}
-                  strokeColor="white"
+                  strokeColor={color}
                 />
               </a>
             </motion.div>

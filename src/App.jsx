@@ -11,7 +11,7 @@ import Contact from './components/Contact';
 
 const App = () => {
   return (
-    <div className='bg-site bg-no-repeat bg-cover overflow-hidden'>
+    <div className='bg-light bg-no-repeat bg-cover overflow-hidden dark:bg-dark'>
       <Header />
       <Banner />
       <Nav />

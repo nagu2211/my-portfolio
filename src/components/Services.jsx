@@ -57,7 +57,7 @@ const Services = () => {
           mb-12 lg:mb-0 p-2"
           >
             <h2 className="h2 text-accent mb-6">My knowledge</h2>
-            <h3 className="h3 max-w-[455px] mb-16">
+            <h3 className="h3 max-w-[455px] mb-16 text-black dark:text-white">
             I am a front-end developer with additional back-end knowledge
             </h3>
             <Link to="work" smooth={true} spy={true} isDynamic={true}>
@@ -79,14 +79,14 @@ const Services = () => {
                 const { name, description, link } = service;
                 return (
                   <div
-                    className="border-b border-white/20 h-[146px]
+                    className="border-b  border-black/20 dark:border-white/20 h-[146px]
                   mb-[7px] flex lg:h-[120px]"
                     key={index}
                   >
                     <div className="max-w-[476px]">
                       <h4
                         className="text-[20px] tracking-wider
-                    font-primary font-semibold mb-4"
+                    font-primary font-semibold mb-4 text-black dark:text-white"
                       >
                         {name}
                       </h4>

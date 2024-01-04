@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html",'./src/**/*.{js,jsx}'],
+  "darkMode": "class",
   theme:  {
     fontFamily: {
       primary: 'Orbitron',
@@ -24,7 +25,8 @@ export default {
         accent: '#43d6bc',
       },
       backgroundImage: {
-        site: "url('./assets/aver.jpg')",
+        light: "url('./assets/white.jpg')",
+        dark: "url('./assets/dark.jpg')",
         about: "url('./assets/about.png')",
       },
     },

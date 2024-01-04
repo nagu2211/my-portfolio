@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 //motion
 import { motion } from "framer-motion";
 //variants
@@ -7,6 +8,8 @@ import { Toaster, toast } from "react-hot-toast";
 import fotoPerfil from "../assets/fotoperfil.jpg";
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
+
   function toaster() {
     toast.custom((t) => (
       <div
@@ -41,14 +44,46 @@ const Contact = () => {
       </div>
     ));
   }
-  
-  function handleSendMessage(event) {
-    event.preventDefault();
-    toaster()
-  }
-  
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .sendForm(
+        "service_r12btvq",
+        "template_stzhef6",
+        form.current,
+        "O8YopqvjzFkKQrExo"
+      )
+      .then(
+        (result) => {
+          toaster();
+        },
+        (error) => {
+          toast.error("Something went wrong.");
+          console.log(error);
+        }
+      )
+      .finally(() => {
+        setLoading(false);
+      });
+  };
   return (
     <section className="py-16 lg:section" id="contact">
+      {loading && (
+        <div className="text-black h-screen flex absolute right-[50%] pt-[15px]">
+          <div className="loadingspinner">
+            <div id="square1"></div>
+            <div id="square2"></div>
+            <div id="square3"></div>
+            <div id="square4"></div>
+            <div id="square5"></div>
+          </div>
+        </div>
+      )}
       <Toaster position="top-center" reverseOrder={false} />
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row">
@@ -67,7 +102,7 @@ const Contact = () => {
               >
                 Get in touch
               </h4>
-              <h2 className="text-[45px] lg:text-[90px] leading-none mb-12">
+              <h2 className="text-[45px] lg:text-[90px] leading-none mb-12 text-black dark:text-white">
                 Let's work <br /> together!
               </h2>
             </div>
@@ -78,31 +113,46 @@ const Contact = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 border rounded-2xl flex flex-col gap-y-6
+            className="flex-1 border border-[#414244] dark:border-[#e5e7eb] rounded-2xl flex flex-col gap-y-6
           pb-24 p-6 items-start"
-            onSubmit={handleSendMessage}>
+            onSubmit={sendEmail}
+            ref={form}
+          >
             <input
-              className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
+              className="bg-transparent border-b border-[#414244] dark:border-[#e5e7eb] text-black py-3 outline-none w-full placeholder:text-black dark:placeholder:text-white focus:border-accent transition-all"
               type="text"
               placeholder="Your name"
+              name="user_name"
               required
             />
             <input
-              className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
+              className="bg-transparent border-b border-[#414244] dark:border-[#e5e7eb] text-black py-3 outline-none w-full placeholder:text-black dark:placeholder:text-white focus:border-accent transition-all"
               type="text"
               placeholder="Your email"
+              name="user_email"
               required
             />
             <textarea
-              className="bg-transparent border-b py-12 outline-none 
-            w-full placeholder:text-white focus:border-accent 
+              className="bg-transparent border-b border-[#414244] dark:border-[#e5e7eb] text-black py-12 outline-none 
+            w-full placeholder:text-black dark:placeholder:text-white focus:border-accent 
             transition-all resize-none mb-12"
               placeholder="Your message"
+              name="message"
               required
             ></textarea>
-            <button className="btn btn-lg" type="submit">
-              Send message
-            </button>
+            {loading ? (
+              <div className="spinner">
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+              </div>
+            ) : (
+              <button className="btn btn-lg" type="submit">
+                Send Message
+              </button>
+            )}
           </motion.form>
         </div>
       </div>

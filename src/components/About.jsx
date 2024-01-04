@@ -33,16 +33,16 @@ const About = () => {
             className="flex-1"
           >
             <h2 className="h2 text-accent">About me.</h2>
-            <h3 className="h3 mb-4">
+            <h3 className="h3 mb-4 text-black dark:text-white">
               I'm Frontend Developer & Full Stack Student from Argentina
             </h3>
-            <p className="mb-6">
+            <p className="mb-6 text-black dark:text-white">
               Passionate about programming, creating, and imagining, with a
               dedicated two-year study in the field. Quick learner and proactive
               team player.
             </p>
-            <h5>Work Experience:</h5>
-            <ul className="list-disc">
+            <h5 className="text-black dark:text-white">Work Experience:</h5>
+            <ul className="list-disc text-black dark:text-white">
               <li>+2 years in 2020. Retail and wholesale sales.</li>
               <li>
                 0.5 years to date. Translation of courses and books for English
@@ -60,16 +60,16 @@ const About = () => {
                 <div className="text-[40px] font-tertiary text-gradient mb-2">
                   B{inView ? <CountUp start={0} end={2} duration={4} /> : null}
                 </div>
-                <div className="font-primary text-sm tracking-[2px]">
+                <div className="font-primary text-sm tracking-[2px] text-black dark:text-white">
                   Lvl of English <br />
                 </div>
               </div>
               <div>
-                <div className="text-[40px] font-tertiary text-gradient mb-2">
+                <div className="text-[40px] font-tertiary text-gradient mb-2 ">
                   {inView ? <CountUp start={0} end={2} duration={6} /> : null}
                   y+
                 </div>
-                <div className="font-primary text-sm tracking-[2px]">
+                <div className="font-primary text-sm tracking-[2px] text-black dark:text-white">
                   Studying <br />
                   Programming
                 </div>
