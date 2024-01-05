@@ -3,9 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://nagu2211.github.io/my-portfolio",
+  "homepage": "http://my-portfolio.lat/",
   "scripts": {
-    "predeploy":"npm run build && echo 'my-portfolio.lat' > ./dist/CNAME",
+    "predeploy":"npm run build && echo my-portfolio.lat > ./dist/CNAME",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
