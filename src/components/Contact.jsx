@@ -119,14 +119,14 @@ const Contact = () => {
             ref={form}
           >
             <input
-              className="bg-transparent border-b border-[#414244] dark:border-[#e5e7eb] text-black py-3 outline-none w-full placeholder:text-black dark:placeholder:text-white focus:border-accent transition-all"
+              className="bg-transparent border-b border-[#414244] dark:border-[#e5e7eb] text-black py-3 outline-none w-full dark:text-white focus:border-accent transition-all"
               type="text"
               placeholder="Your name"
               name="user_name"
               required
             />
             <input
-              className="bg-transparent border-b border-[#414244] dark:border-[#e5e7eb] text-black py-3 outline-none w-full placeholder:text-black dark:placeholder:text-white focus:border-accent transition-all"
+              className="bg-transparent border-b border-[#414244] dark:border-[#e5e7eb] text-black py-3 outline-none w-full dark:text-white focus:border-accent transition-all"
               type="text"
               placeholder="Your email"
               name="user_email"
@@ -134,7 +134,7 @@ const Contact = () => {
             />
             <textarea
               className="bg-transparent border-b border-[#414244] dark:border-[#e5e7eb] text-black py-12 outline-none 
-            w-full placeholder:text-black dark:placeholder:text-white focus:border-accent 
+            w-full  dark:text-white focus:border-accent 
             transition-all resize-none mb-12"
               placeholder="Your message"
               name="message"
