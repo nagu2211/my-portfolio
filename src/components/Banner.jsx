@@ -1,6 +1,6 @@
-import React,{useEffect,useState,useRef} from "react";
+import React,{useEffect,useState} from "react";
 //images
-import image from "../assets/avatar.png";
+import image from "../assets/avatar.avif";
 //icons
 import UseAnimations from "react-useanimations";
 import github from "react-useanimations/lib/github";

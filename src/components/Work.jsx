@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 //variants
 import { fadeIn } from "../Variants";
 //img
-import Img1 from "../assets/qwerty.png";
-import Img2 from "../assets/mywatch.png";
-import Img3 from "../assets/alwaysFresh.png";
+import Img1 from "../assets/qwerty.avif";
+import Img2 from "../assets/mywatch.avif";
+import Img3 from "../assets/alwaysFresh.avif";
 //icons
 import htmlIcon from "../assets/htmlIcon.svg";
 import cssIcon from "../assets/cssIcon.svg";
@@ -18,7 +18,6 @@ import firebaseIcon from "../assets/firebaseIcon.ico";
 import handlebarsIcon from "../assets/handlebars-logo.svg";
 import mongoIcon from "../assets/mongo.svg";
 import expressIcon from "../assets/expressIcon.png";
-import nodeIcon from "../assets/nodeJsIcon.svg";
 
 const Work = () => {
   return (

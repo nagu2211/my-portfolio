@@ -25,9 +25,9 @@ export default {
         accent: '#43d6bc',
       },
       backgroundImage: {
-        light: "url('./assets/white.jpg')",
-        dark: "url('./assets/dark.jpg')",
-        about: "url('./assets/about.png')",
+        light: "url('./assets/white.avif')",
+        dark: "url('./assets/dark.avif')",
+        about: "url('./assets/about.avif')",
       },
     },
   },

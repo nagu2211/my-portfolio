@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 //variants
 import { fadeIn } from "../Variants";
 import { Toaster, toast } from "react-hot-toast";
-import fotoPerfil from "../assets/fotoperfil.jpg";
+import fotoPerfil from "../assets/fotoperfil.avif";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
