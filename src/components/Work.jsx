@@ -7,6 +7,18 @@ import { fadeIn } from "../Variants";
 import Img1 from "../assets/qwerty.png";
 import Img2 from "../assets/mywatch.png";
 import Img3 from "../assets/alwaysFresh.png";
+//icons
+import htmlIcon from "../assets/htmlIcon.svg";
+import cssIcon from "../assets/cssIcon.svg";
+import jsIcon from "../assets/jsIcon.svg";
+import bootstrapIcon from "../assets/bootstrapIcon.svg";
+import chakraIcon from "../assets/chakraIcon.svg";
+import reactIcon from "../assets/reactIcon.svg";
+import firebaseIcon from "../assets/firebaseIcon.ico";
+import handlebarsIcon from "../assets/handlebars-logo.svg";
+import mongoIcon from "../assets/mongo.svg";
+import expressIcon from "../assets/expressIcon.png";
+import nodeIcon from "../assets/nodeJsIcon.svg";
 
 const Work = () => {
   return (
@@ -24,34 +36,12 @@ const Work = () => {
             <div>
               <h2 className="h2 leading-tight text-accent">My Latest Work.</h2>
               <p className="max-w-sm mb-14 text-black dark:text-white">
-              I show you my latest academic projects and personal designs, hoping that we can work together!
+                I show you my latest academic projects and personal designs,
+                hoping that we can work together!
               </p>
               <button className="btn btn-sm">View all projects</button>
             </div>
-            {/* image */}
-            <a href="https://nagu2211.github.io/coderjs/" target="_blank">
-            <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
-              {/* overlay */}
-              <div
-                className="group-hover:bg-black/30 w-full h-full absolute
-              z-40 transition-all duration-300"
-              ></div>
-              {/* img */}
-              <img
-                className="group-hover:scale-125 transition-all duration-500"
-                src={Img1}
-                alt=""
-              />
-              {/* pretitle */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient">ECOMMERCE</span>
-              </div>
-              {/* title */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">QWERTY</span>
-              </div>
-            </div>
-            </a>
+            
           </motion.div>
           <motion.div
             variants={fadeIn("left", 0.2)}
@@ -61,7 +51,37 @@ const Work = () => {
             className="flex-1 flex flex-col gap-y-6"
           >
             {/* image */}
-            <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
+            <a href="https://nagu2211.github.io/coderjs/" target="_blank">
+              <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl h-[210px]">
+                {/* overlay */}
+                <div
+                  className="group-hover:bg-black/30 w-full h-full absolute
+              z-40 transition-all duration-300"
+                ></div>
+                {/* img */}
+                <img
+                  className="group-hover:scale-125 transition-all duration-500"
+                  src={Img1}
+                  alt=""
+                />
+                {/* pretitle */}
+                <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
+                  <span className="text-gradient">ECOMMERCE</span>
+                </div>
+                {/* title */}
+                <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
+                  <span className="text-3xl text-white">QWERTY</span>
+                </div>
+                <div className="absolute -bottom-full left-12 group-hover:bottom-7 transition-all duration-1000 z-50 flex gap-1">
+                  <img src={htmlIcon} alt="" className="w-[20px]" />
+                  <img src={cssIcon} alt="" className="w-[20px]" />
+                  <img src={jsIcon} alt="" className="w-[20px]" />
+                  <img src={bootstrapIcon} alt="" className="w-[20px]" />
+                </div>
+              </div>
+            </a>
+            {/* image */}
+            <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl h-[210px]">
               {/* overlay */}
               <div
                 className="group-hover:bg-black/70 w-full h-full absolute
@@ -81,30 +101,44 @@ const Work = () => {
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
                 <span className="text-3xl text-white">MY WATCH</span>
               </div>
+              <div className="absolute -bottom-full left-12 group-hover:bottom-7 transition-all duration-1000 z-50 flex gap-1">
+                <img src={htmlIcon} alt="" className="w-[20px]" />
+                <img src={cssIcon} alt="" className="w-[20px]" />
+                <img src={reactIcon} alt="" className="w-[20px]" />
+                <img src={chakraIcon} alt="" className="w-[20px]" />
+                <img src={firebaseIcon} alt="" className="w-[20px]" />
+              </div>
             </div>
             {/* image */}
             <a href="https://alwaysfresh.onrender.com/" target="_blank">
-            <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
-              {/* overlay */}
-              <div
-                className="group-hover:bg-black/70 w-full h-full absolute
+              <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl h-[210px]">
+                {/* overlay */}
+                <div
+                  className="group-hover:bg-black/70 w-full h-full absolute
               z-40 transition-all duration-300"
-              ></div>
-              {/* img */}
-              <img
-                className="group-hover:scale-125 transition-all duration-500"
-                src={Img3}
-                alt=""
-              />
-              {/* pretitle */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                <span className="text-gradient">ECOMMERCE</span>
+                ></div>
+                {/* img */}
+                <img
+                  className="group-hover:scale-125 transition-all duration-500"
+                  src={Img3}
+                  alt=""
+                />
+                {/* pretitle */}
+                <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
+                  <span className="text-gradient">ECOMMERCE</span>
+                </div>
+                {/* title */}
+                <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
+                  <span className="text-3xl text-white">ALWAYS FRESH</span>
+                </div>
+                <div className="absolute -bottom-full left-12 group-hover:bottom-7 transition-all duration-1000 z-50 flex gap-1">
+                  <img src={mongoIcon} alt="" className="w-[20px]" />
+                  <img src={expressIcon} alt="" className="w-[20px]" />
+                  <img src={handlebarsIcon} alt="" className="w-[20px]" />
+                  <img src={jsIcon} alt="" className="w-[20px]" />
+                  <img src={cssIcon} alt="" className="w-[20px]" />
+                </div>
               </div>
-              {/* title */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                <span className="text-3xl text-white">ALWAYS FRESH</span>
-              </div>
-            </div>
             </a>
           </motion.div>
         </div>

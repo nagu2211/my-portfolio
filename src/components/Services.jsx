@@ -1,11 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../Variants";
-import webdev from "../assets/frame1.png";
-import csspre from "../assets/frame2.png";
-import jslib from "../assets/frame3.png";
-import design from "../assets/frame4.png";
-import aditional from "../assets/frame5.png";
 import { Link } from "react-scroll";
 //icons
 import htmlIcon from "../assets/htmlIcon.svg";
@@ -24,6 +19,8 @@ import mongoIcon from "../assets/mongo.svg";
 import photoshopIcon from "../assets/photoshopIcon.png";
 import figmaIcon from "../assets/figmaIcon.svg";
 import expressIcon from "../assets/expressIcon.png";
+import handlebarsIcon from "../assets/handlebars-logo.svg"
+import chakraIcon from "../assets/chakraIcon.svg"
 
 const Services = () => {
   return (
@@ -76,6 +73,8 @@ const Services = () => {
                   <img src={photoshopIcon} alt="" className="max-w-[100px] p-3" />
                   <img src={figmaIcon} alt="" className="max-w-[100px] p-3" />
                   <img src={expressIcon} alt="" className="max-w-[100px] p-3" />
+                  <img src={handlebarsIcon} alt="" className="max-w-[100px] p-3" />
+                  <img src={chakraIcon} alt="" className="max-w-[100px] p-3" />
                 </div>
               </div>
             </div>
