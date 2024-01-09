@@ -1,7 +1,7 @@
-import React, {useEffect} from "react";
+import React from "react";
 // import icons
 import { BiHomeAlt, BiUser } from "react-icons/bi";
-import { BsClipboardData, BsBriefcase, BsChatSquare } from "react-icons/bs";
+import { BsBriefcase, BsChatSquare,BsBook } from "react-icons/bs";
 import { Link } from "react-scroll";
 
 const Nav = () => {  
@@ -44,7 +44,7 @@ const Nav = () => {
           spyThrottle={1000}
           className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
         >
-          <BsClipboardData />
+          <BsBook />
         </Link>
         <Link
           to="work"
