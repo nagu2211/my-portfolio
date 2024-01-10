@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://my-portfolio.lat",
+  "homepage": "https://my-portfolio.lat",
   "scripts": {
     "predeploy":"npm run build && echo my-portfolio.lat > ./dist/CNAME",
     "dev": "vite",
