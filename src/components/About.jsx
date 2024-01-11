@@ -3,8 +3,10 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { fadeIn } from "../Variants";
+import {useTranslation} from "react-i18next"
 
 const About = () => {
+  const [t,i18n] = useTranslation("global")
   const [ref, inView] = useInView({
     threshold: 0.5,
   });
@@ -31,25 +33,17 @@ const About = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1"
           >
-            <h2 className="h2 text-accent">About me.</h2>
-            <h3 className="h3 mb-4 text-black dark:text-white">
-              I'm Frontend Developer & Full Stack Student from Argentina
-            </h3>
-            <p className="mb-6 text-black dark:text-white">
-              Passionate about programming, creating, and imagining, with a
-              dedicated two-year study in the field. Quick learner and proactive
-              team player.
-            </p>
-            <h5 className="text-black dark:text-white">Work Experience:</h5>
+            <h2 className="h2 text-accent">{t("about.about-title")}</h2>
+            <h3 className="h3 mb-4 text-black dark:text-white">{t("about.about-subtitle")}</h3>
+            <p className="mb-6 text-black dark:text-white">{t("about.about-me")}</p>
+            <h5 className="text-black dark:text-white">{t("about.work-exp")}</h5>
             <ul className="list-disc text-black dark:text-white">
-              <li>+2 years in 2020. Retail and wholesale sales.</li>
+              <li>{t("about.exp-one")}</li>
               <li>
-                0.5 years to date. Translation of courses and books for English
-                teachers into Spanish.
+              {t("about.exp-two")}
               </li>
               <li>
-                1 year to date. Managing a local store specializing in fresh and
-                food products.
+              {t("about.exp-three")}
               </li>
             </ul>
 
@@ -60,7 +54,7 @@ const About = () => {
                   B{inView ? <CountUp start={0} end={2} duration={4} /> : null}
                 </div>
                 <div className="font-primary text-sm tracking-[2px] text-black dark:text-white">
-                  Lvl of English <br />
+                  {t("about.lvl-english")} <br />
                 </div>
               </div>
               <div>
@@ -69,8 +63,8 @@ const About = () => {
                   y+
                 </div>
                 <div className="font-primary text-sm tracking-[2px] text-black dark:text-white">
-                  Studying <br />
-                  Programming
+                {t("about.studying")} <br />
+                {t("about.programming")}
                 </div>
               </div>
             </div>

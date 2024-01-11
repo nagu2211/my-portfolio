@@ -1,0 +1,23 @@
+{
+    "header": {
+        "work-w-me":"Trabaja conmigo"
+    },
+    "banner": {
+        "i-am-a":"Yo soy",
+        "hi":"Hola! Gracias por estar aqui, ponte comodo y dejame enseñarte quien soy y como llegue hasta aqui.",
+        "contact-me":"Contactame",
+        "me":"Yo"
+    },
+    "about":{
+        "about-title":"Sobre mi.",
+        "about-subtitle":"Soy desarrollador Frontend y estudiante Full Stack de Argentina",
+        "about-me":"Apasionado por la programación, la creación y la imaginación, con un estudio dedicado de dos años en el campo. Aprendo rápido y trabajo en equipo de forma proactiva.",
+        "work-exp":"Experiencia laboral:",
+        "exp-one":"2020-2022. Ventas al por menor y al por mayor.",
+        "exp-two":"2023-hasta la fecha: Traducción de cursos y libros para profesores de inglés al español.",
+        "exp-three":"2023-hasta la fecha: Gestión de una tienda local especializada en productos alimenticios y frescos.",
+        "lvl-english":"Nvl de Inglés",
+        "studying":"Estudiando",
+        "programming":"programación"
+    }
+}

@@ -2,10 +2,15 @@ import React, { useEffect, useState } from "react";
 //images
 import logo from "../assets/logo.svg";
 import { Link } from "react-scroll";
+//translations
+import {useTranslation} from "react-i18next"
+
 
 import "./../index.css";
 
 const Header = () => {
+  const [t,i18n] = useTranslation("global")
+
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
@@ -23,6 +28,10 @@ const Header = () => {
     <header className="position: sticky py-8">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
+          <div>
+          <button onClick={()=>i18n.changeLanguage("es")}>ES</button>
+          <button onClick={()=>i18n.changeLanguage("en")}>EN</button>
+          </div>
           <div className="achica">
 
             <label className="theme-switch " >
@@ -56,7 +65,7 @@ const Header = () => {
             </label>
           </div>
           <Link to="contact" smooth={true} spy={true} isDynamic={true}>
-            <button className="btn btn-sm ">Work with me</button>
+            <button className="btn btn-sm ">{t("header.work-w-me")}</button>
           </Link>
         </div>
       </div>
