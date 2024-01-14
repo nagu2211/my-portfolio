@@ -21,8 +21,11 @@ import figmaIcon from "../assets/figmaIcon.svg";
 import expressIcon from "../assets/expressIcon.png";
 import handlebarsIcon from "../assets/handlebars-logo.svg"
 import chakraIcon from "../assets/chakraIcon.svg"
+import {useTranslation} from "react-i18next"
+
 
 const Services = () => {
+  const [t,i18n] = useTranslation("global")
   return (
     <section className="section" id="services">
       <div className="container mx-auto">
@@ -36,12 +39,12 @@ const Services = () => {
             className="flex-1 lg:bg-bottom bg-no-repeat bg-cover
           mb-12 lg:mb-0 p-2"
           >
-            <h2 className="h2 text-accent mb-6">My knowledge</h2>
+            <h2 className="h2 text-accent mb-6">{t("services.knowledge")}</h2>
             <h3 className="h3 max-w-[455px] mb-16 text-black dark:text-white">
-              I am a front-end developer with additional back-end knowledge
+            {t("services.i-am-a-frontend")}
             </h3>
             <Link to="work" smooth={true} spy={true} isDynamic={true}>
-              <button className="btn btn-sm">See my work</button>
+              <button className="btn btn-sm">{t("services.see-my-work")}</button>
             </Link>
           </motion.div>
           {/* services */}
