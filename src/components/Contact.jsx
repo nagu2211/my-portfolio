@@ -30,7 +30,7 @@ const Contact = () => {
                 Santiago Espindola
               </p>
               <p className="mt-1 text-sm text-gray-500">
-              🤗I have received your message, I will contact you as soon as possible.
+              🤗 I have received your message, I will contact you as soon as possible.
               </p>
             </div>
           </div>
