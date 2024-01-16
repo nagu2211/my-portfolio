@@ -4,7 +4,10 @@
     },
     "banner": {
         "i-am-a":"I am a",
-        "hi":"Hi! Thanks for coming here, make yourself comfortable and I'll show you who I am and how I got here.",
+        "front-dev":"Frontend Developer",
+        "back-dev":"Backend Developer",
+        "creative": "Creative person",
+        "hi":"Hi! Thanks for dropping by. Make yourself at home, and I'll share a bit about who I am and the journey that brought me here.",
         "contact-me":"Contact me",
         "me":"Me"
     },

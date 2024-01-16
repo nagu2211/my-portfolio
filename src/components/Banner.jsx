@@ -38,6 +38,13 @@ const Banner = () => {
   useEffect(() => {
     setColor(isDarkMode ? "white" : "black");
   }, [isDarkMode]);
+  const [animationKey, setAnimationKey] = useState(0);
+  const fr = t('banner.front-dev');
+  const bck = t('banner.back-dev');
+  const crp = t('banner.creative');
+  useEffect(() => {
+    setAnimationKey((prevKey) => prevKey + 1);
+  }, [fr, bck, crp]);
   return (
     <section
       className="min-h-[85vh] lg:min-h-[78vh] flex items-center"
@@ -63,23 +70,12 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-6 text-[36px] lg:text-[37px] font-secondary
+              className="mb-6 text-[30px] lg:text-[25px] font-secondary
               font-semibold uppercase leading-[1]"
             >
-              <span className="text-black dark:text-white mr-4">{t("banner.i-am-a")}</span>
+              <span className="text-black dark:text-white mr-3">{t("banner.i-am-a")}</span>
               <TypeAnimation
-                sequence={[
-                  "Frontend Dev",
-                  3000,
-                  "Backend Dev",
-                  3000,
-                  "creative person",
-                  3000,
-                ]}
-                speed={50}
-                className="text-accent"
-                wrapper="span"
-                repeat={Infinity}
+                sequence={[fr, 3000, bck, 3000, crp, 3000]} key={animationKey} speed={50} className="text-accent" wrapper="span" repeat={Infinity} 
               />
             </motion.div>
             <motion.p
