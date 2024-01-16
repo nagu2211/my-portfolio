@@ -6,8 +6,11 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../Variants";
 import { Toaster, toast } from "react-hot-toast";
 import fotoPerfil from "../assets/fotoperfil.avif";
+import {useTranslation} from "react-i18next"
+
 
 const Contact = () => {
+  const [t,i18n] = useTranslation("global");
   const [loading, setLoading] = useState(false);
 
   function toaster() {
@@ -27,8 +30,7 @@ const Contact = () => {
                 Santiago Espindola
               </p>
               <p className="mt-1 text-sm text-gray-500">
-                🤗 Thank you for contacting me, I will get in touch with you
-                shortly!
+              🤗 I have received your message, I will contact you as soon as possible.
               </p>
             </div>
           </div>
@@ -100,10 +102,10 @@ const Contact = () => {
                 className="text-xl uppercase text-accent
               font-medium mb-2 tracking-wide"
               >
-                Get in touch
+                {t("contact.get-in-touch")}
               </h4>
               <h2 className="text-[45px] lg:text-[90px] leading-none mb-12 text-black dark:text-white">
-                Let's work <br /> together!
+              {t("contact.lets-work")} <br /> {t("contact.together")}
               </h2>
             </div>
           </motion.div>
@@ -150,7 +152,7 @@ const Contact = () => {
               </div>
             ) : (
               <button className="btn btn-lg" type="submit">
-                Send Message
+                {t("contact.send-msg")}
               </button>
             )}
           </motion.form>

@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 //images
 import logo from "../assets/logo.svg";
 import { Link } from "react-scroll";
+//translations
+import { useTranslation } from "react-i18next";
 
 import "./../index.css";
 
 const Header = () => {
+  const [t, i18n] = useTranslation("global");
+
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
@@ -23,10 +27,22 @@ const Header = () => {
     <header className="position: sticky py-8">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
-          <div className="achica">
+          <div className="button-container">
+            <button className="button" onClick={() => i18n.changeLanguage("es")}>
+              ES
+            </button>
+            <button className="button" onClick={() => i18n.changeLanguage("en")}>
+              EN
+            </button>
+          </div>
 
-            <label className="theme-switch " >
-              <input type="checkbox" className="theme-switch__checkbox " onClick={handleChangeTheme}/>
+          <div className="achica">
+            <label className="theme-switch ">
+              <input
+                type="checkbox"
+                className="theme-switch__checkbox "
+                onClick={handleChangeTheme}
+              />
               <div className="theme-switch__container">
                 <div className="theme-switch__clouds"></div>
                 <div className="theme-switch__stars-container">
@@ -56,7 +72,7 @@ const Header = () => {
             </label>
           </div>
           <Link to="contact" smooth={true} spy={true} isDynamic={true}>
-            <button className="btn btn-sm ">Work with me</button>
+            <button className="btn btn-sm ">{t("header.work-w-me")}</button>
           </Link>
         </div>
       </div>

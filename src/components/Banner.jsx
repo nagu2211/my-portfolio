@@ -13,9 +13,11 @@ import { motion } from "framer-motion";
 //variants
 import { fadeIn } from "../Variants";
 import { Link } from "react-scroll";
-
+//translations
+import {useTranslation} from "react-i18next"
 
 const Banner = () => {
+  const [t,i18n] = useTranslation("global")
   const [color, setColor] = useState("white");
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -64,7 +66,7 @@ const Banner = () => {
               className="mb-6 text-[36px] lg:text-[37px] font-secondary
               font-semibold uppercase leading-[1]"
             >
-              <span className="text-black dark:text-white mr-4">I am a</span>
+              <span className="text-black dark:text-white mr-4">{t("banner.i-am-a")}</span>
               <TypeAnimation
                 sequence={[
                   "Frontend Dev",
@@ -87,8 +89,8 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="mb-8 max-w-lg mx-auto lg:mx-0 text-black dark:text-white"
             >
-              Hi! Thanks for coming here, make yourself comfortable and I'll
-              show you who I am and how I got here.
+              {t("banner.hi")}
+              
             </motion.p>
             <motion.div
               variants={fadeIn("up", 0.6)}
@@ -99,11 +101,11 @@ const Banner = () => {
               mx-auto justify-center lg:mx-0 lg:justify-start "
             >
               <Link to="contact" smooth={true} spy={true} isDynamic={true}>
-                <button className="btn btn-lg ">Contact me</button>
+                <button className="btn btn-lg ">{t("banner.contact-me")}</button>
               </Link>
               <Link to="about" smooth={true} spy={true} isDynamic={true}>
               <button className="text-gradient btn-link">
-                Me
+              {t("banner.me")}
               </button>
               </Link>
               

@@ -18,8 +18,11 @@ import firebaseIcon from "../assets/firebaseIcon.ico";
 import handlebarsIcon from "../assets/handlebars-logo.svg";
 import mongoIcon from "../assets/mongo.svg";
 import expressIcon from "../assets/expressIcon.png";
+import {useTranslation} from "react-i18next"
+
 
 const Work = () => {
+  const [t,i18n] = useTranslation("global");
   return (
     <section className="section" id="work">
       <div className="container mx-auto">
@@ -33,12 +36,11 @@ const Work = () => {
           >
             {/* text */}
             <div>
-              <h2 className="h2 leading-tight text-accent">My Latest Work.</h2>
+              <h2 className="h2 leading-tight text-accent">{t("work.my-latest-works")}</h2>
               <p className="max-w-sm mb-14 text-black dark:text-white">
-                I show you my latest academic projects and personal designs,
-                hoping that we can work together!
+              {t("work.i-show-you")}
               </p>
-              <button className="btn btn-sm">View all projects</button>
+              <button className="btn btn-sm">{t("work.all-projects")}</button>
             </div>
             
           </motion.div>
