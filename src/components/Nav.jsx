@@ -11,7 +11,7 @@ const Nav = () => {
     <div className="container mx-auto">
       <div
         className="w-full bg-black/20 h-[96px] backdrop-blur-2x1 rounded-full max-w-[460px] mx-auto
-      px-5 flex justify-between items-center text-2x1 text-white/50 glassmorphism"
+      px-5 flex justify-between items-center text-2x1 text-white/85 dark:text-white/50 glassmorphism"
       >
         <Link
           to="home"
