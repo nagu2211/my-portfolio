@@ -1,60 +1,51 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { fadeIn } from "../Variants";
-import { Link } from "react-scroll";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../Variants';
+import { Link } from 'react-scroll';
 //icons
-import htmlIcon from "../assets/htmlIcon.svg";
-import cssIcon from "../assets/cssIcon.svg";
-import jsIcon from "../assets/jsIcon.svg";
-import tailwindIcon from "../assets/tailwindIcon.svg";
-import bootstrapIcon from "../assets/bootstrapIcon.svg";
-import sassIcon from "../assets/sassIcon.svg";
-import reactIcon from "../assets/reactIcon.svg";
-import nextJsIcon from "../assets/nextJsIcon.svg";
-import githubIcon from "../assets/githubIcon.svg";
-import gitIcon from "../assets/gitIcon.svg";
-import nodeJsIcon from "../assets/nodeJsIcon.svg";
-import firebaseIcon from "../assets/firebaseIcon.ico";
-import mongoIcon from "../assets/mongo.svg";
-import photoshopIcon from "../assets/photoshopIcon.png";
-import figmaIcon from "../assets/figmaIcon.svg";
-import expressIcon from "../assets/expressIcon.png";
-import handlebarsIcon from "../assets/handlebars-logo.svg"
-import chakraIcon from "../assets/chakraIcon.svg"
-import {useTranslation} from "react-i18next"
-
+import htmlIcon from '../assets/htmlIcon.svg';
+import cssIcon from '../assets/cssIcon.svg';
+import jsIcon from '../assets/jsIcon.svg';
+import tailwindIcon from '../assets/tailwindIcon.svg';
+import bootstrapIcon from '../assets/bootstrapIcon.svg';
+import sassIcon from '../assets/sassIcon.svg';
+import reactIcon from '../assets/reactIcon.svg';
+import nextJsIcon from '../assets/nextJsIcon.svg';
+import githubIcon from '../assets/githubIcon.svg';
+import gitIcon from '../assets/gitIcon.svg';
+import nodeJsIcon from '../assets/nodeJsIcon.svg';
+import firebaseIcon from '../assets/firebaseIcon.ico';
+import mongoIcon from '../assets/mongo.svg';
+import photoshopIcon from '../assets/photoshopIcon.png';
+import figmaIcon from '../assets/figmaIcon.svg';
+import expressIcon from '../assets/expressIcon.png';
+import handlebarsIcon from '../assets/handlebars-logo.svg';
+import chakraIcon from '../assets/chakraIcon.svg';
+import { useTranslation } from 'react-i18next';
 
 const Services = () => {
-  const [t,i18n] = useTranslation("global")
+  const [t, i18n] = useTranslation('global');
   return (
     <section className="section" id="services">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row">
           {/* text & image */}
           <motion.div
-            variants={fadeIn("right", 0.3)}
+            variants={fadeIn('right', 0.3)}
             initial="hidden"
-            whileInView={"show"}
+            whileInView={'show'}
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1 lg:bg-bottom bg-no-repeat bg-cover
           mb-12 lg:mb-0 p-2"
           >
-            <h2 className="h2 text-accent mb-6">{t("services.knowledge")}</h2>
-            <h3 className="h3 max-w-[455px] mb-16 text-black dark:text-white">
-            {t("services.i-am-a-frontend")}
-            </h3>
+            <h2 className="h2 text-accent mb-6">{t('services.knowledge')}</h2>
+            <h3 className="h3 max-w-[455px] mb-16 text-black dark:text-white">{t('services.i-am-a-frontend')}</h3>
             <Link to="work" smooth={true} spy={true} isDynamic={true}>
-              <button className="btn btn-sm">{t("services.see-my-work")}</button>
+              <button className="btn btn-sm">{t('services.see-my-work')}</button>
             </Link>
           </motion.div>
           {/* services */}
-          <motion.div
-            variants={fadeIn("left", 0.5)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 text-black"
-          >
+          <motion.div variants={fadeIn('left', 0.5)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.3 }} className="flex-1 text-black">
             <div className="cardSkills">
               <div className="circle"></div>
               <div className="circle"></div>

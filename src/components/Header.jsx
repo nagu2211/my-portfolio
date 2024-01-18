@@ -1,56 +1,48 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 //images
-import logo from "../assets/logo.svg";
-import { Link } from "react-scroll";
+import logo from '../assets/logo.svg';
+import { Link } from 'react-scroll';
 //translations
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
-import "./../index.css";
+import './../index.css';
 
 const Header = () => {
-  const [t, i18n] = useTranslation("global");
+  const [t, i18n] = useTranslation('global');
 
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
-    if (theme === "dark") {
-      document.querySelector("html").classList.add("dark");
+    if (theme === 'dark') {
+      document.querySelector('html').classList.add('dark');
     } else {
-      document.querySelector("html").classList.remove("dark");
+      document.querySelector('html').classList.remove('dark');
     }
   }, [theme]);
 
   const handleChangeTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
   return (
     <header className="position: sticky py-8">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <div className="button-container">
-            <button className="button" onClick={() => i18n.changeLanguage("es")}>
+            <button className="button" onClick={() => i18n.changeLanguage('es')}>
               ES
             </button>
-            <button className="button" onClick={() => i18n.changeLanguage("en")}>
+            <button className="button" onClick={() => i18n.changeLanguage('en')}>
               EN
             </button>
           </div>
 
           <div className="achica">
             <label className="theme-switch ">
-              <input
-                type="checkbox"
-                className="theme-switch__checkbox "
-                onClick={handleChangeTheme}
-              />
+              <input type="checkbox" className="theme-switch__checkbox " onClick={handleChangeTheme} />
               <div className="theme-switch__container">
                 <div className="theme-switch__clouds"></div>
                 <div className="theme-switch__stars-container">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 144 55"
-                    fill="none"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
                     <path
                       fillRule="evenodd"
                       clipRule="evenodd"
@@ -72,7 +64,7 @@ const Header = () => {
             </label>
           </div>
           <Link to="contact" smooth={true} spy={true} isDynamic={true}>
-            <button className="btn btn-sm ">{t("header.work-w-me")}</button>
+            <button className="btn btn-sm ">{t('header.work-w-me')}</button>
           </Link>
         </div>
       </div>

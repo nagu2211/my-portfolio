@@ -1,56 +1,40 @@
-import React from "react";
+import React from 'react';
 //motion
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 //variants
-import { fadeIn } from "../Variants";
+import { fadeIn } from '../Variants';
 //img
-import Img1 from "../assets/qwerty.avif";
-import Img2 from "../assets/mywatch.avif";
-import Img3 from "../assets/alwaysFresh.avif";
+import Img1 from '../assets/qwerty.avif';
+import Img2 from '../assets/mywatch.avif';
+import Img3 from '../assets/alwaysFresh.avif';
 //icons
-import htmlIcon from "../assets/htmlIcon.svg";
-import cssIcon from "../assets/cssIcon.svg";
-import jsIcon from "../assets/jsIcon.svg";
-import bootstrapIcon from "../assets/bootstrapIcon.svg";
-import chakraIcon from "../assets/chakraIcon.svg";
-import reactIcon from "../assets/reactIcon.svg";
-import firebaseIcon from "../assets/firebaseIcon.ico";
-import handlebarsIcon from "../assets/handlebars-logo.svg";
-import mongoIcon from "../assets/mongo.svg";
-import expressIcon from "../assets/expressIcon.png";
-import {useTranslation} from "react-i18next"
-
+import htmlIcon from '../assets/htmlIcon.svg';
+import cssIcon from '../assets/cssIcon.svg';
+import jsIcon from '../assets/jsIcon.svg';
+import bootstrapIcon from '../assets/bootstrapIcon.svg';
+import chakraIcon from '../assets/chakraIcon.svg';
+import reactIcon from '../assets/reactIcon.svg';
+import firebaseIcon from '../assets/firebaseIcon.ico';
+import handlebarsIcon from '../assets/handlebars-logo.svg';
+import mongoIcon from '../assets/mongo.svg';
+import expressIcon from '../assets/expressIcon.png';
+import { useTranslation } from 'react-i18next';
 
 const Work = () => {
-  const [t,i18n] = useTranslation("global");
+  const [t, i18n] = useTranslation('global');
   return (
     <section className="section" id="work">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-x-10">
-          <motion.div
-            variants={fadeIn("right", 0.3)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0"
-          >
+          <motion.div variants={fadeIn('right', 0.3)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.3 }} className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0">
             {/* text */}
             <div>
-              <h2 className="h2 leading-tight text-accent">{t("work.my-latest-works")}</h2>
-              <p className="max-w-sm mb-14 text-black dark:text-white">
-              {t("work.i-show-you")}
-              </p>
-              <button className="btn btn-sm">{t("work.all-projects")}</button>
+              <h2 className="h2 leading-tight text-accent">{t('work.my-latest-works')}</h2>
+              <p className="max-w-sm mb-14 text-black dark:text-white">{t('work.i-show-you')}</p>
+              <button className="btn btn-sm">{t('work.all-projects')}</button>
             </div>
-            
           </motion.div>
-          <motion.div
-            variants={fadeIn("left", 0.2)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 flex flex-col gap-y-6"
-          >
+          <motion.div variants={fadeIn('left', 0.2)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.3 }} className="flex-1 flex flex-col gap-y-6">
             {/* image */}
             <a href="https://nagu2211.github.io/coderjs/" target="_blank">
               <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl h-[210px]">
@@ -60,11 +44,7 @@ const Work = () => {
               z-40 transition-all duration-300"
                 ></div>
                 {/* img */}
-                <img
-                  className="group-hover:scale-125 transition-all duration-500"
-                  src={Img1}
-                  alt=""
-                />
+                <img className="group-hover:scale-125 transition-all duration-500" src={Img1} alt="" />
                 {/* pretitle */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
                   <span className="text-gradient">ECOMMERCE</span>
@@ -89,11 +69,7 @@ const Work = () => {
               z-40 transition-all duration-300"
               ></div>
               {/* img */}
-              <img
-                className="group-hover:scale-125 transition-all duration-500"
-                src={Img2}
-                alt=""
-              />
+              <img className="group-hover:scale-125 transition-all duration-500" src={Img2} alt="" />
               {/* pretitle */}
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
                 <span className="text-gradient">ECOMMERCE</span>
@@ -119,11 +95,7 @@ const Work = () => {
               z-40 transition-all duration-300"
                 ></div>
                 {/* img */}
-                <img
-                  className="group-hover:scale-125 transition-all duration-500"
-                  src={Img3}
-                  alt=""
-                />
+                <img className="group-hover:scale-125 transition-all duration-500" src={Img3} alt="" />
                 {/* pretitle */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
                   <span className="text-gradient">ECOMMERCE</span>
