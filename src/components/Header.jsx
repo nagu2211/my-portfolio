@@ -25,7 +25,7 @@ const Header = () => {
   };
   return (
     <header className="position: sticky py-8">
-      <div className="container mx-auto">
+      <div className="container mx-auto z-20">
         <div className="flex justify-between items-center">
           <div className="button-container">
             <button className="button" onClick={() => i18n.changeLanguage('es')}>

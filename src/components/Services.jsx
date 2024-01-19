@@ -27,7 +27,7 @@ const Services = () => {
   const [t, i18n] = useTranslation('global');
   return (
     <section className="section" id="services">
-      <div className="container mx-auto">
+      <div className="container mx-auto z-20">
         <div className="flex flex-col lg:flex-row">
           {/* text & image */}
           <motion.div

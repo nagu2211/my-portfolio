@@ -28,7 +28,8 @@ export default {
       backgroundImage: {
         light: "url('./assets/white.avif')",
         dark: "url('./assets/dark.avif')",
-        about: "url('./assets/about.webp')",
+        about: "url('./assets/about2.png')",
+        banner: "url('./assets/avatar2.png')"
       },
     },
   },
