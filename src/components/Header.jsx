@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react';
-//images
-import logo from '../assets/logo.svg';
-import { Link } from 'react-scroll';
 //translations
 import { useTranslation } from 'react-i18next';
 
@@ -24,9 +21,9 @@ const Header = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
   return (
-    <header className="position: sticky py-8">
+    <header className="sticky py-8">
       <div className="container mx-auto z-20">
-        <div className="flex justify-between items-center">
+         <div className="flex justify-between items-center">
           <div className="button-container">
             <button className="button" onClick={() => i18n.changeLanguage('es')}>
               ES
@@ -63,10 +60,7 @@ const Header = () => {
               </div>
             </label>
           </div>
-          <Link to="contact" smooth={true} spy={true} isDynamic={true}>
-            <button className="btn btn-sm ">{t('header.work-w-me')}</button>
-          </Link>
-        </div>
+        </div> 
       </div>
     </header>
   );
