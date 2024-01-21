@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 //variants
 import { fadeIn } from '../Variants';
 //img
-import Img1 from '../assets/qwerty.avif';
-import Img2 from '../assets/mywatch.avif';
-import Img3 from '../assets/alwaysFresh.avif';
+import Img1 from '../assets/qwerty.webp';
+import Img2 from '../assets/mywatch.webp';
+import Img3 from '../assets/alwaysFresh.webp';
 //icons
 import htmlIcon from '../assets/htmlIcon.svg';
 import cssIcon from '../assets/cssIcon.svg';

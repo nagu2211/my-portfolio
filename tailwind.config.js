@@ -26,7 +26,7 @@ export default {
         accent: '#43d6bc',
       },
       backgroundImage: {
-        dark:'radial-gradient(ellipse 80% 80% at 50% -20%,rgba(120,119,198,0.3),rgba(255,255,255,0))',
+        dark:'radial-gradient(ellipse 80% 80% at 50% -20%,rgba(83, 138, 214,0.3),rgba(255,255,255,0))',
         light:'radial-gradient(60% 120% at 50% 50%,hsla(0,0%,100%,0) 0,rgba(178, 224, 237, 0.5) 100%)',
         about: "url('./assets/about2.png')",
         banner: "url('./assets/avatar2.png')"
