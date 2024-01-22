@@ -75,13 +75,13 @@ const Banner = () => {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-6 text-[30px] lg:text-[25px] font-secondary
+              className="mb-1 text-[30px] lg:text-[25px] font-secondary
               font-semibold uppercase leading-[1]"
             >
               <span className="text-black dark:text-white mr-3">{t('banner.i-am-a')}</span>
               <TypeAnimation sequence={[fr, 3000, bck, 3000, crp, 3000]} key={animationKey} speed={50} className="text-accent" wrapper="span" repeat={Infinity} />
             </motion.div>
-            <motion.p variants={fadeIn('up', 0.5)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className="mb-8 max-w-lg mx-auto lg:mx-0 text-black dark:text-white">
+            <motion.p variants={fadeIn('up', 0.5)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className="mb-3 max-w-lg mx-auto lg:mx-0 text-black dark:text-white">
               {t('banner.hi')}
             </motion.p>
             <motion.div

@@ -15,15 +15,16 @@ const Nav = () => {
           <Link to="home" activeClass="active" smooth={true} spy={true} isDynamic={true} offset={-200} className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center">
             <BiHomeAlt />
           </Link>
-          <Link to="about" activeClass="active" smooth={true} spy={true} isDynamic={true} spyThrottle={1000} className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center">
+          <Link to="about" activeClass="active" smooth={true} spy={true} isDynamic={true} offset={-20} spyThrottle={1000} className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center">
             <BiUser />
-          </Link>
-          <Link to="services" activeClass="active" smooth={true} spy={true} isDynamic={true} spyThrottle={1000} className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center">
-            <BsBook />
           </Link>
           <Link to="work" activeClass="active" smooth={true} spy={true} isDynamic={true} spyThrottle={1000} className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center">
             <BsBriefcase />
           </Link>
+          <Link to="services" activeClass="active" smooth={true} spy={true} isDynamic={true} spyThrottle={1000} className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center">
+            <BsBook />
+          </Link>
+          
           <Link to="contact" activeClass="active" smooth={true} spy={true} isDynamic={true} spyThrottle={1000} className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center">
             <BsChatSquare />
           </Link>

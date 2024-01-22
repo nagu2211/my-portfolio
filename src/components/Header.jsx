@@ -21,7 +21,7 @@ const Header = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
   return (
-    <header className="sticky py-8">
+    <header className="pt-8 pb-4">
       <div className="container mx-auto z-20">
          <div className="flex justify-between items-center">
           <div className="button-container">

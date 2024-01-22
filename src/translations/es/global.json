@@ -24,14 +24,12 @@
     "programming": "programación"
   },
   "services": {
-    "knowledge": "Mi conocimiento",
-    "i-am-a-frontend": "Soy desarrollador frontend con conocimiento adicional en backend ",
-    "see-my-work": "Ver mi trabajo"
+    "knowledge": "Conocimiento",
+    "i-am-a-frontend": "Soy desarrollador frontend con conocimiento adicional en backend "
   },
   "work": {
-    "my-latest-works": "Mis Ultimos Trabajos.",
-    "i-show-you": "Te muestro mis ultimos proyectos academicos y de diseño personal, con la esperanza de que podamos trabajar juntos",
-    "all-projects": "Ver todos los proyectos"
+    "my-latest-works": "Ultimos Trabajos.",
+    "i-show-you": "Te muestro mis ultimos proyectos academicos y de diseño personal, con la esperanza de que podamos trabajar juntos"
   },
   "contact": {
     "get-in-touch": "Ponerse en contacto",

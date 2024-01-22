@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../Variants';
-import { Link } from 'react-scroll';
+import imageSkills from "../assets/skills.jpg"
+
 //icons
 import htmlIcon from '../assets/htmlIcon.svg';
 import cssIcon from '../assets/cssIcon.svg';
@@ -21,6 +22,7 @@ import figmaIcon from '../assets/figmaIcon.svg';
 import expressIcon from '../assets/expressIcon.png';
 import handlebarsIcon from '../assets/handlebars-logo.svg';
 import chakraIcon from '../assets/chakraIcon.svg';
+//translations
 import { useTranslation } from 'react-i18next';
 
 const Services = () => {
@@ -40,9 +42,6 @@ const Services = () => {
           >
             <h2 className="h2 text-accent mb-6">{t('services.knowledge')}</h2>
             <h3 className="h3 max-w-[455px] mb-16 text-black dark:text-white">{t('services.i-am-a-frontend')}</h3>
-            <Link to="work" smooth={true} spy={true} isDynamic={true}>
-              <button className="btn btn-sm">{t('services.see-my-work')}</button>
-            </Link>
           </motion.div>
           {/* services */}
           <motion.div variants={fadeIn('left', 0.5)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.3 }} className="flex-1 text-black">

@@ -31,11 +31,7 @@ const Work = () => {
             <div>
               <h2 className="h2 leading-tight text-accent">{t('work.my-latest-works')}</h2>
               <p className="max-w-sm mb-14 text-black dark:text-white">{t('work.i-show-you')}</p>
-              <button className="btn btn-sm">{t('work.all-projects')}</button>
             </div>
-          </motion.div>
-          <motion.div variants={fadeIn('left', 0.2)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.3 }} className="flex-1 flex flex-col gap-y-6">
-            {/* image */}
             <a href="https://nagu2211.github.io/coderjs/" target="_blank">
               <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl h-[210px]">
                 {/* overlay */}
@@ -61,6 +57,10 @@ const Work = () => {
                 </div>
               </div>
             </a>
+          </motion.div>
+          <motion.div variants={fadeIn('left', 0.2)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.3 }} className="flex-1 flex flex-col gap-y-6">
+            {/* image */}
+            
             {/* image */}
             <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl h-[210px]">
               {/* overlay */}
