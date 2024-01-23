@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html",'./src/**/*.{js,jsx}'],
+  content: ["./index.html",'./src/**/*.{js,jsx}','node_modules/flowbite-react/lib/esm/**/*.js'],
   "darkMode": "class",
+  
   theme:  {
     fontFamily: {
       primary: 'Orbitron',
@@ -36,6 +37,7 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+  ],
 };
 

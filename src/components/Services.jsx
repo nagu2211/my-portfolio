@@ -1,8 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../Variants';
-import imageSkills from "../assets/skills.jpg"
-
+//carousel
+import { Carousel } from 'flowbite-react';
+import certificateImage1 from "../assets/certFrontendDev.png"
+import certificateImage2 from "../assets/certFullStack.png"
+import certificateImage3 from "../assets/certWebDev.png"
+import { Flowbite } from 'flowbite-react';
 //icons
 import htmlIcon from '../assets/htmlIcon.svg';
 import cssIcon from '../assets/cssIcon.svg';
@@ -27,6 +31,14 @@ import { useTranslation } from 'react-i18next';
 
 const Services = () => {
   const [t, i18n] = useTranslation('global');
+
+  const customTheme = {
+    button: {
+      color: {
+        primary: 'bg-red-500 hover:bg-red-600',
+      },
+    },
+  };
   return (
     <section className="section" id="services">
       <div className="container mx-auto z-20">
@@ -40,8 +52,16 @@ const Services = () => {
             className="flex-1 lg:bg-bottom bg-no-repeat bg-cover
           mb-12 lg:mb-0 p-2"
           >
-            <h2 className="h2 text-accent mb-6">{t('services.knowledge')}</h2>
-            <h3 className="h3 max-w-[455px] mb-16 text-black dark:text-white">{t('services.i-am-a-frontend')}</h3>
+            <h2 className="h2 text-accent mb-1">{t('services.knowledge')}</h2>
+            <h3 className="h3 max-w-[455px] mb-1 text-black dark:text-white">{t('services.i-am-a-frontend')}</h3>
+            <div className="h-[19.2rem] sm:h-[19.2rem] xl:h-80 2xl:h-96 pr-2">
+      <Carousel id="buttonCarousel">
+        <img src={certificateImage1} alt="..." />
+        <img src={certificateImage2} alt="..." />
+        <img src={certificateImage3} alt="..." />
+      </Carousel>
+    </div>
+
           </motion.div>
           {/* services */}
           <motion.div variants={fadeIn('left', 0.5)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.3 }} className="flex-1 text-black">

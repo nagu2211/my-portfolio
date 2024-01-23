@@ -10,6 +10,10 @@
   background-image: radial-gradient(circle farthest-corner at 92.3% 71.5%, rgba(83, 138, 214, 1) 0%, rgba(134, 231, 214, 1) 90%);
   box-shadow: 0px 4.42184px 107.23px rgba(83, 138, 214, 0.51);
 }
+#buttonCarousel span{
+  background-color: rgba(255, 255, 255, .5);
+}
+
 
 .btn:hover {
   background: rgb(134, 231, 214);
