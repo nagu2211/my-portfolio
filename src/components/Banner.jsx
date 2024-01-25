@@ -46,8 +46,8 @@ const Banner = () => {
     setAnimationKey((prevKey) => prevKey + 1);
   }, [fr, bck, crp]);
   return (
-    <section className="min-h-[85vh] lg:min-h-[78vh] flex items-center " id="home">
-      <div className="container mx-auto z-20">
+    <section className="min-h-[85vh] lg:min-h-[78vh] xxl:min-h-[80vh] flex items-center " id="home">
+      <div className="container mx-auto z-20 xxl:ml-52 xxl:mr-48">
         <div
           className="flex flex-col gap-y-8 lg:flex-row lg:items-center
         lg:gap-x-12"

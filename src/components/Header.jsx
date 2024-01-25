@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <header className="pt-4">
       <div className="container mx-auto z-20">
-         <div className="flex justify-between items-center">
+         <div className="flex justify-between items-center xxl:justify-center xxl:gap-6">
           <div className="button-container">
             <button className="button" onClick={() => i18n.changeLanguage('es')}>
               ES

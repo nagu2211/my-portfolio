@@ -26,14 +26,14 @@ const Work = () => {
     <section className="section" id="work">
       <div className="container mx-auto z-20">
         <div className="flex flex-col lg:flex-row gap-x-10">
-          <motion.div variants={fadeIn('right', 0.3)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.3 }} className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0">
+          <motion.div variants={fadeIn('right', 0.3)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.3 }} className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0 xxl:gap-y-[7.9rem]">
             {/* text */}
             <div>
               <h2 className="h2 leading-tight text-accent">{t('work.my-latest-works')}</h2>
               <p className="max-w-sm mb-14 text-black dark:text-white">{t('work.i-show-you')}</p>
             </div>
             <a href="https://nagu2211.github.io/coderjs/" target="_blank">
-              <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl h-[210px]">
+              <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl h-[210px] xxl:h-[282px]">
                 {/* overlay */}
                 <div
                   className="group-hover:bg-black/30 w-full h-full absolute
@@ -58,23 +58,19 @@ const Work = () => {
               </div>
             </a>
           </motion.div>
-          <motion.div variants={fadeIn('left', 0.2)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.3 }} className="flex-1 flex flex-col gap-y-6">
-            {/* image */}
-            
-            {/* image */}
-            <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl h-[210px]">
-              {/* overlay */}
+          <motion.div variants={fadeIn('left', 0.2)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.3 }} className="flex-1 flex flex-col gap-y-6 ">
+            <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl h-[210px] xxl:h-[284px]">
               <div
                 className="group-hover:bg-black/70 w-full h-full absolute
               z-40 transition-all duration-300"
               ></div>
-              {/* img */}
+
               <img className="group-hover:scale-125 transition-all duration-500" src={Img2} alt="" />
-              {/* pretitle */}
+
               <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
                 <span className="text-gradient">ECOMMERCE</span>
               </div>
-              {/* title */}
+
               <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
                 <span className="text-3xl text-white">MY WATCH</span>
               </div>
@@ -86,21 +82,20 @@ const Work = () => {
                 <img src={firebaseIcon} alt="" className="w-[20px]" />
               </div>
             </div>
-            {/* image */}
+
             <a href="https://alwaysfresh.onrender.com/" target="_blank">
-              <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl h-[210px]">
-                {/* overlay */}
+              <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl h-[210px] xxl:h-[284px]">
                 <div
                   className="group-hover:bg-black/70 w-full h-full absolute
               z-40 transition-all duration-300"
                 ></div>
-                {/* img */}
+
                 <img className="group-hover:scale-125 transition-all duration-500" src={Img3} alt="" />
-                {/* pretitle */}
+
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
                   <span className="text-gradient">ECOMMERCE</span>
                 </div>
-                {/* title */}
+
                 <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
                   <span className="text-3xl text-white">ALWAYS FRESH</span>
                 </div>

@@ -65,11 +65,11 @@ const Services = () => {
           </motion.div>
           {/* services */}
           <motion.div variants={fadeIn('left', 0.5)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.3 }} className="flex-1 text-black">
-            <div className="cardSkills">
+            <div className="cardSkills xl:h-[31.5rem] ">
               <div className="circle"></div>
               <div className="circle"></div>
-              <div className="card-inner">
-                <div className="skills">
+              <div className="card-inner ">
+                <div className="skills xl:p-[33px]">
                   <img src={htmlIcon} alt="" className="max-w-[100px] p-3" />
                   <img src={cssIcon} alt="" className="max-w-[100px] p-3" />
                   <img src={jsIcon} alt="" className="max-w-[100px] p-3" />
