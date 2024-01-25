@@ -56,9 +56,9 @@ const Services = () => {
             <h3 className="h3 max-w-[455px] mb-1 text-black dark:text-white">{t('services.i-am-a-frontend')}</h3>
             <div className="h-[19.2rem] sm:h-[19.2rem] xl:h-80 2xl:h-96 pr-2">
       <Carousel id="buttonCarousel">
-        <img src={certificateImage1} alt="certificate" />
-        <img src={certificateImage2} alt="certificate" />
-        <img src={certificateImage3} alt="certificate" />
+        <a href="https://www.coderhouse.com/certificados/643bfb5e0b0d31000296fe73?lang=en" target='_blank'><img src={certificateImage1} alt="certificate" /></a>
+        <a href="https://www.coderhouse.com/certificados/653b79e572ab7500f6835096?lang=en" target='_blank'><img src={certificateImage2} alt="certificate" /></a>
+        <a href="https://www.coderhouse.com/certificados/638cbad6be450c000f682903?lang=en" target='_blank'><img src={certificateImage3} alt="certificate" /></a>
       </Carousel>
     </div>
 
